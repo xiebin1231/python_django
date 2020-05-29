@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>书籍列表</h1>
+    <ul>
+        {% for item in books %}
+        <a href='./people/{{item.id}}'>
+            <li style='color:red'>
+               {{ loop.index }} {{item.name}}
+            </li>
+        </a>
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
